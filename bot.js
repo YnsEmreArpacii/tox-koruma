@@ -207,7 +207,7 @@ client.on("messageUpdate", async (oldMsg, newMsg) => {
 client.on("message", async message => {
   if(message.author.id === client.user.id) return;
   if(message.guild) return;
-  client.channels.get('702638161456791883').send(new Discord.RichEmbed().setAuthor("Yeni Bir DM", client.user.avatarURL).setFooter(message.author.tag, message.author.avatarURL).setDescription(`**Gönderenin ID:** ${message.author.id}`).setTimestamp().addField("Mesaj", message.content).setColor("RANDOM"))
+  client.channels.get('702977049329139732').send(new Discord.RichEmbed().setAuthor("Yeni Bir DM", client.user.avatarURL).setFooter(message.author.tag, message.author.avatarURL).setDescription(`**Gönderenin ID:** ${message.author.id}`).setTimestamp().addField("Mesaj", message.content).setColor("RANDOM"))
 })
 // BOT DM LOG \\
 
