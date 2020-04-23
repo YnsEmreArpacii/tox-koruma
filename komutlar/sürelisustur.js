@@ -3,8 +3,8 @@ const ms = require("ms");
 
 module.exports.run = async (client, message, args) => {
 
-    if (!message.member.roles.find("name", "ᕒ sᴜsᴛᴜʀᴍᴀ ᓬ")) {
-        return message.channel.send(' **Bu Komutu Kullanmak için** \*`ᕒ sᴜsᴛᴜʀᴍᴀ ᓬ*\` **Rolüne Sahip Olman Lazım** ')
+    if (!message.member.roles.find("name", "Ꮦ I  sᴜsᴛᴜʀᴍᴀ")) {
+        return message.channel.send(' **Bu Komutu Kullanmak için** \*`Ꮦ I  sᴜsᴛᴜʀᴍᴀ*\` **Rolüne Sahip Olman Lazım** ')
             .then(m => m.delete(5000));
     } 
  let efeÜye = message.mentions.members.first() || message.guild.members.get(args[0])
