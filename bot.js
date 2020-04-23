@@ -204,11 +204,17 @@ client.on("messageUpdate", async (oldMsg, newMsg) => {
 // CHAT LOG \\
 
 // BOT DM LOG \\
-client.on("message", async message => {
-  if(message.author.id === client.user.id) return;
-  if(message.guild) return;
-  client.channels.get('702977049329139732').send(new Discord.RichEmbed().setAuthor("Yeni Bir DM", client.user.avatarURL).setFooter(message.author.tag, message.author.avatarURL).setDescription(`**Gönderenin ID:** ${message.author.id}`).setTimestamp().addField("Mesaj", message.content).setColor("RANDOM"))
-})
+client.on("message", message => {
+    const dmchannel = client.channels.find("name", "dm");
+    if (message.channel.type === "dm") {
+        if (message.author.bot) return;
+        dmchannel.sendMessage("", {embed: {
+            color: 3447003,
+            title: `Gönderen: ${message.author.tag}`,
+            description: `Bota Özelden Gönderilen DM: ${message.content}`
+        }})
+    }
+});
 // BOT DM LOG \\
 
 // REKLAM \\
